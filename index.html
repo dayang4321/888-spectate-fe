@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__wrapper">
+      <h1 class="header__title">Lotto Calculator</h1>
+      <span class="header__banner">NEW</span>
+    </div>
+  </header>
+  <main class="content">
+    <div class="content-box left-panel">
+      <h3 class="content-box__header">The Irish Lotto</h3>
+      <div class="content-box__body">
+        <p>Since 16th April 1988, the Irish Lotto draw takes place every Saturday at 8pm. On 30th May 1990 an additional
+          Wednesday
+          evening draw was introduced.
+
+          Enter a date in the form to get the next three draw dates as well as the previous two draws.</p>
+      </div>
+
+    </div>
+    <div class="content-box right_top-panel">
+      <h3 class="content-box__header">Enter a Date and Time</h3>
+      <div class="content-box__body">
+        <form id="lotto_form">
+          <label for="drawDate" class="sr-only">Date:</label>
+          <input class="draw-date" type="datetime-local" id="drawDate" name="drawDate" required>
+          <button type="submit">SUBMIT</button>
+        </form>
+      </div>
+
+    </div>
+    <div class="content-box right_bottom-panel">
+      <table class="result-table">
+        <thead class="content-box__header">
+          <tr>
+            <th class="date-column">DRAW DATE</th>
+            <th>PAST OR FUTURE</th>
+          </tr>
+        </thead>
+        <tbody class="content-box__body">
+          <tr>
+            <td>02-04-2024</td>
+            <td class="period-cell">Past</td>
+          </tr>
+          <tr>
+            <td>02-04-2024</td>
+            <td class="period-cell">Past</td>
+          </tr>
+          <tr>
+            <td>02-04-2024</td>
+            <td class="period-cell">Future</td>
+          </tr>
+          <tr>
+            <td>02-04-2024</td>
+            <td class="period-cell">Future</td>
+          </tr>
+          <tr>
+            <td>02-04-2024</td>
+            <td class="period-cell">Future</td>
+          </tr>
+        </tbody>
+
+
+      </table>
+
+
+    </div>
+
+  </main>
+
+</body>
+
+</html>

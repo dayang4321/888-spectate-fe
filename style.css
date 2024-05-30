@@ -1,0 +1,195 @@
+/* Default Variables */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
+
+:root {
+  --main-bg-color: #4a4a4a;
+  --black-bg-color: #000000;
+  --content-bg-color: #272727;
+  --accent-color: #fc6200;
+  --light-color: #ffffff;
+
+  --roboto-font: 'Roboto', sans-serif;
+
+  --h1-font-size: 1.5rem;
+  --h3-font-size: 1rem;
+  --paragraph-font-size: 14px;
+  --small-text-font-size: 8px;
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth !important;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: var(--roboto-font);
+  color: var(--light-color);
+  position: relative;
+  font-size: var(--body-text-font-size);
+  overflow-x: hidden;
+  padding: 3.125% 5%;
+}
+
+.header {
+  overflow: hidden;
+}
+
+.header__wrapper {
+  position: relative;
+  background-color: var(--black-bg-color);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.header__banner {
+  display: block;
+  position: absolute;
+  right: -48px;
+  top: -18px;
+  width: 100px;
+  background-color: var(--accent-color);
+  font-size: 15px;
+  text-align: center;
+  padding: 4px;
+  transform: rotateZ(45deg);
+  transform-origin: top left;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: 400;
+}
+h3 {
+  font-size: var(--h3-font-size);
+  font-weight: 400;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.content {
+  padding: 0.625rem;
+  display: grid;
+  gap: 0.625rem;
+  grid-template-areas:
+    'intro input'
+    'intro result';
+  grid-template-rows: 10.25rem 1fr;
+  grid-template-columns: 18.125rem 1fr;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  color: var(--light-color);
+}
+
+.content-box__body {
+  padding: 1.25rem 1rem;
+  background-color: var(--content-bg-color);
+  flex: 1;
+}
+
+.content-box.right_top-panel .content-box__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+table.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  border: 1px solid #000000;
+}
+
+.date-column {
+  width: 8.25rem;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  font-weight: 400;
+}
+
+tbody td.period-cell {
+  background-image: linear-gradient(black, black);
+  background-repeat: no-repeat;
+  background-size: 1px 60%, calc(100% - 1px) 100%;
+  background-position: left 50%, 0;
+}
+
+.content-box__header,
+thead.content-box__header td {
+  background-color: var(--black-bg-color);
+  padding: 0.625rem 1rem;
+}
+
+.content-box__article {
+  font-size: var(--paragraph-font-size);
+}
+
+.content-box.left-panel {
+  grid-area: intro;
+}
+
+.content-box.right_top-panel {
+  grid-area: input;
+}
+
+.content-box.right_bottom-panel {
+  grid-area: result;
+}
+
+#lotto_form {
+  display: flex;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+#lotto_form input {
+  width: 16.25rem;
+  height: 36px;
+  font-size: 1rem;
+  padding: 0.625rem;
+  font-size: var(--paragraph-font-size);
+}
+
+#lotto_form button {
+  appearance: button;
+  background-color: var(--accent-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 8.75rem;
+  border-width: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--light-color);
+}
