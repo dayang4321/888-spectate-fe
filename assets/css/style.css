@@ -141,7 +141,7 @@ td {
 tbody td.period-cell {
   background-image: linear-gradient(black, black);
   background-repeat: no-repeat;
-  background-size: 1px 60%, calc(100% - 1px) 100%;
+  background-size: 1.5px 60%, 100% 100%;
   background-position: left 50%, 0;
 }
 
