@@ -138,11 +138,16 @@ td {
   font-weight: 400;
 }
 
-tbody td.period-cell {
+tbody tr {
   background-image: linear-gradient(black, black);
   background-repeat: no-repeat;
   background-size: 1.5px 60%, 100% 100%;
-  background-position: left 50%, 0;
+  background-position: 8.25rem 50%, 0;
+  height: 40px;
+}
+
+tr.highlight td {
+  background-color: #191919;
 }
 
 .content-box__header,
@@ -192,4 +197,13 @@ thead.content-box__header td {
   cursor: pointer;
   font-size: 1rem;
   color: var(--light-color);
+}
+
+td {
+  opacity: 0;
+}
+
+td.fade-in {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
 }
