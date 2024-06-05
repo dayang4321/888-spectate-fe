@@ -199,6 +199,16 @@ thead.content-box__header td {
   color: var(--light-color);
 }
 
+#lotto_form button:hover {
+  background-color: #fc8d1e;
+  transform: scale(1.05);
+}
+
+#lotto_form button:active {
+  background-color: #fd6100;
+  transform: scale(0.95);
+}
+
 td {
   opacity: 0;
 }
