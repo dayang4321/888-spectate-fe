@@ -12,7 +12,7 @@
   --roboto-font: 'Roboto', sans-serif;
 
   --h1-font-size: 1.5rem;
-  --h3-font-size: 1rem;
+  --h3-font-size: 16px;
   --paragraph-font-size: 14px;
   --small-text-font-size: 8px;
   font-size: 16px;
@@ -172,40 +172,46 @@ thead.content-box__header td {
   grid-area: result;
 }
 
-#lotto_form {
+.form {
   display: flex;
   gap: 1.25rem;
   align-items: stretch;
 }
 
-#lotto_form input {
+.form__input {
   width: 16.25rem;
-  height: 36px;
+  height: 2.25rem;
+  min-height: 36px;
   font-size: 1rem;
   padding: 0.625rem;
   font-size: var(--paragraph-font-size);
 }
 
-#lotto_form button {
+.form__button {
   appearance: button;
   background-color: var(--accent-color);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 8.75rem;
+  max-width: 8.75rem;
   border-width: 0;
   cursor: pointer;
   font-size: 1rem;
   color: var(--light-color);
+  height: 2.25rem;
+  min-height: 36px;
+  padding: 0 3rem;
+  transition: 0.5s;
+  font-weight: 500;
 }
 
-#lotto_form button:hover {
+.form__button:hover {
   background-color: #fc8d1e;
   transform: scale(1.05);
 }
 
-#lotto_form button:active {
-  background-color: #fd6100;
+.form__button:active {
+  background-color: #d95402;
   transform: scale(0.95);
 }
 
@@ -216,4 +222,56 @@ td {
 td.fade-in {
   transition: opacity 0.5s ease-in-out;
   opacity: 1;
+}
+
+/* Responsive Styles */
+
+@media (min-width: 1440px) {
+  :root {
+    font-size: 18px;
+    --h3-font-size: 18px;
+    --paragraph-font-size: 16px;
+    --small-text-font-size: 12px;
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    padding: 5% 2.5%;
+  }
+  .form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form__input {
+    min-width: 65%;
+  }
+  .form__button {
+    min-width: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .content {
+    grid-template-areas:
+      'intro'
+      'input'
+      'result';
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .content-box {
+    margin-bottom: 1.25rem;
+  }
+  .form__input {
+    min-width: 75%;
+  }
+  .form__button {
+    min-width: 50%;
+  }
 }
