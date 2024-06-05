@@ -60,56 +60,56 @@ function getLottoDrawDates(inputDate = new Date()) {
   return drawDates;
 }
 
-console.log(getNextLottoDraw());
-console.log(getLottoDrawDates());
+// console.log(getNextLottoDraw());
+// console.log(getLottoDrawDates());
 
-function runUnitTests() {
-  const testCases = [
-    {
-      input: new Date('2024-05-27T19:00:00.000'),
-      expected: new Date('2024-05-29T20:00:00.000'),
-      description: 'Before Wednesday draw',
-    },
-    {
-      input: new Date('2024-05-29T19:00:00.000'),
-      expected: new Date('2024-05-29T20:00:00.000'),
-      description: 'On Wednesday before 8 PM',
-    },
-    {
-      input: new Date('2024-05-29T21:00:00.000'),
-      expected: new Date('2024-06-01T20:00:00.000'),
-      description: 'On Wednesday after 8 PM',
-    },
-    {
-      input: new Date('2024-05-31T21:00:00.000'),
-      expected: new Date('2024-06-01T20:00:00.000'),
-      description: 'Before Saturday draw',
-    },
-    {
-      input: new Date('2024-06-01T19:00:00.000'),
-      expected: new Date('2024-06-01T20:00:00.000'),
-      description: 'On Saturday before 8 PM',
-    },
-    {
-      input: new Date('2024-06-01T21:00:00.000'),
-      expected: new Date('2024-06-05T20:00:00.000'),
-      description: 'On Saturday after 8 PM',
-    },
-    {
-      input: new Date('2024-06-02T19:00:00.000'),
-      expected: new Date('2024-06-05T20:00:00.000'),
-      description: 'After Saturday draw',
-    },
-  ];
+// function runUnitTests() {
+//   const testCases = [
+//     {
+//       input: new Date('2024-05-27T19:00:00.000'),
+//       expected: new Date('2024-05-29T20:00:00.000'),
+//       description: 'Before Wednesday draw',
+//     },
+//     {
+//       input: new Date('2024-05-29T19:00:00.000'),
+//       expected: new Date('2024-05-29T20:00:00.000'),
+//       description: 'On Wednesday before 8 PM',
+//     },
+//     {
+//       input: new Date('2024-05-29T21:00:00.000'),
+//       expected: new Date('2024-06-01T20:00:00.000'),
+//       description: 'On Wednesday after 8 PM',
+//     },
+//     {
+//       input: new Date('2024-05-31T21:00:00.000'),
+//       expected: new Date('2024-06-01T20:00:00.000'),
+//       description: 'Before Saturday draw',
+//     },
+//     {
+//       input: new Date('2024-06-01T19:00:00.000'),
+//       expected: new Date('2024-06-01T20:00:00.000'),
+//       description: 'On Saturday before 8 PM',
+//     },
+//     {
+//       input: new Date('2024-06-01T21:00:00.000'),
+//       expected: new Date('2024-06-05T20:00:00.000'),
+//       description: 'On Saturday after 8 PM',
+//     },
+//     {
+//       input: new Date('2024-06-02T19:00:00.000'),
+//       expected: new Date('2024-06-05T20:00:00.000'),
+//       description: 'After Saturday draw',
+//     },
+//   ];
 
-  testCases.forEach(({ input, expected, description }) => {
-    const result = getNextLottoDraw(input);
-    console.log(
-      `${description}: ${
-        result.toISOString() === expected.toISOString() ? 'PASS' : 'FAIL'
-      }`
-    );
-  });
-}
+//   testCases.forEach(({ input, expected, description }) => {
+//     const result = getNextLottoDraw(input);
+//     console.log(
+//       `${description}: ${
+//         result.toISOString() === expected.toISOString() ? 'PASS' : 'FAIL'
+//       }`
+//     );
+//   });
+// }
 
-runUnitTests();
+// runUnitTests();
